@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author AWANG
+ * @author AWANG, Irham, 
  */
 public class Decrypt {
     private String plaintext = "";
@@ -31,29 +31,31 @@ public class Decrypt {
 
         table.fillTable();
 
-        // table.showTable();
+        table.showTable();
 
+        // replace space
         ciphertext = ciphertext.replaceAll("\\s+","");
-
-        List<String> ciphertextreal = new ArrayList<String>();
+        
+        List<String> ciphertextList = new ArrayList<String>();
+        
         int len = ciphertext.length();
         
+        // put the series of 2-digits from ciphertext into a list
+        // each 2-digits now represent one element in the list
         for(int i=0;i<len;i+=2){
-             ciphertextreal.add(ciphertext.substring(i, (i+2)));
+             ciphertextList.add(ciphertext.substring(i, (i+2)));
         }
 
-        for(int i=0;i<ciphertextreal.size();i++){
-           System.out.println(ciphertextreal.get(i));
-        }
-
-        int loop = ciphertextreal.size();
+        int loop = ciphertextList.size();
         int count = 0;
         String word;
 
+        // while loop will traverse the list to find matching digits from the digitTable
         while(count<loop){
             
-            word = ciphertextreal.get(count);
+            word = ciphertextList.get(count);
             
+            //find digits from digitTable that match the element
             for(int i=0;i<key.length();i++){
 
                 for(int j=0;j<character.length;j++){

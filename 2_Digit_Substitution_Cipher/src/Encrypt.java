@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author irham
+ * @author Irham
  */
 public class Encrypt {
 
@@ -36,7 +36,7 @@ public class Encrypt {
         
         table.fillTable();
         
-        //table.showTable();
+        table.showTable();
       
         //converting to ciphertext      
         ArrayList<String> match = new ArrayList<String>();
@@ -65,8 +65,7 @@ public class Encrypt {
                 }
             }
         }
-        
-        //System.out.println();
+                
         //output ciphertext
         return ciphertext;
     }
