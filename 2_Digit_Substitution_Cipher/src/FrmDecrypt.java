@@ -6,7 +6,7 @@
 
 /**
  *
- * @author ASUS
+ * @author Irham
  */
 public class FrmDecrypt extends javax.swing.JFrame {
 
